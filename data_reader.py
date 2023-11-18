@@ -21,7 +21,7 @@ class DataReader:
       self.test_data[city] = self._read_data(os.path.join(data_dir, 'test', test_file))
 
   def _read_data(self, file_path):
-    print('Reading data from %s' % file_path)
+    print('Reading data from %s' % file_path)  # file_path is train.pickle
     data = []
     with open(file_path, 'rb') as f:
       try:

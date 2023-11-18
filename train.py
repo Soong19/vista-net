@@ -18,8 +18,8 @@ FLAGS = tf.flags.FLAGS
 
 tf.flags.DEFINE_string("checkpoint_dir", 'checkpoints',
                        """Path to checkpoint folder""")
-tf.flags.DEFINE_string("log_dir", 'log',
-                       """Path to log folder""")
+# tf.flags.DEFINE_string("log_dir", 'log',
+#                        """Path to log folder""")
 
 tf.flags.DEFINE_integer("num_checkpoints", 1,
                         """Number of checkpoints to store (default: 1)""")
@@ -41,7 +41,7 @@ tf.flags.DEFINE_integer("hidden_dim", 50,
                         """Hidden dimensions of GRU cell (default: 50)""")
 tf.flags.DEFINE_integer("att_dim", 100,
                         """Attention dimensions (default: 100)""")
-tf.flags.DEFINE_integer("emb_size", 200,
+tf.flags.DEFINE_integer("emb_size", 300,
                         """Word embedding size (default: 200)""")
 tf.flags.DEFINE_integer("num_images", 3,
                         """Number of images per review (default: 3)""")
@@ -187,4 +187,6 @@ def main(_):
 
 
 if __name__ == '__main__':
-  tf.app.run()
+    print(1111111)
+    print(tf.test.is_gpu_available())
+    tf.app.run()

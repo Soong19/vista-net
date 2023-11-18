@@ -1,7 +1,7 @@
 import os
 import numpy as np
 
-photo_feature_dir = 'data/photo_features'
+photo_feature_dir = 'data/data/photo_features'
 photo_features = {}
 
 MEAN = np.load(os.path.join(photo_feature_dir, 'mean.npy'))

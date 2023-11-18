@@ -1,6 +1,5 @@
 import tensorflow as tf
 import tensorflow.contrib.rnn as rnn
-
 from data_utils import batch_review_normalize, batch_image_normalize
 from layers import bidirectional_rnn, text_attention, visual_aspect_attention
 from model_utils import get_shape, load_glove

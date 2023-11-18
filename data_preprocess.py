@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 cities = ['Boston', 'Chicago', 'Los Angeles', 'New York', 'San Francisco']
 
-data_dir = 'data'
+data_dir = 'data/data'
 
 train_raw_file = os.path.join(data_dir, 'train.json')
 valid_raw_file = os.path.join(data_dir, 'valid.json')
@@ -92,8 +92,9 @@ def load_vocabulary():
     print('Can not load vocabulary')
     sys.exit(0)
 
-
 def dump_file(input_file, output_file):
+  # 使用 text rating photos构成 dumpfile pickle 供训练使用
+
   if os.path.exists(output_file):
     print('%s is dumped already' % output_file)
     return

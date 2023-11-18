@@ -41,8 +41,9 @@ def load_glove(vocab_size, emb_size):
   embedding_weights = {}
   f = open('glove/glove.6B.{}d.txt'.format(emb_size), encoding='utf-8')
   for line in f:
-    values = line.split()
+    values = line.split(' ')
     word = values[0]
+    # print(line)
     coefs = np.asarray(values[1:], dtype='float32')
     embedding_weights[word] = coefs
   f.close()
