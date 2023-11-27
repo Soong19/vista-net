@@ -88,7 +88,7 @@ def evaluate(session, dataset, model, loss, accuracy, pre, summary_op=None,city=
 def test(session, data_reader, model, loss, accuracy, epoch, pre, result_file):
     for city in cities:
         test_loss, test_acc = evaluate(session, data_reader.read_test_set(city),
-                                       model, loss, accuracy, pre,city)
+                                       model, loss, accuracy, pre,city=city)
 
         result_file.write('city={},epoch={},loss={:.4f},acc={:.4f}\n'.format(city, epoch, test_loss, test_acc))
     result_file.flush()
